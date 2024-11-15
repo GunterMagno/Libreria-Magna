@@ -24,11 +24,6 @@ def comprobar_numero(numero) -> bool:
         print("*Error*, intenta de nuevo.")
         return False
     return True
-
-
-def limpiar_consola():
-    import os
-    os.system("cls")
     
 
 def elegir_opcion_menu() -> int:
@@ -69,6 +64,13 @@ def pedir_numero_usuario(mensaje :str) -> str:
     return numero
 
 
+def preguntar_salir() -> bool:
+    respuesta = input("\nEstas seguro que quieres salir? -> ")
+    if respuesta == "s" or respuesta == "si":
+        return True
+    elif respuesta == "n" or respuesta == "no":
+        return False
+
 
 def pausa(tiempo :int, tecla_enter :bool):
     import time
@@ -78,14 +80,9 @@ def pausa(tiempo :int, tecla_enter :bool):
         input("\nPresione ENTER para continuar...")
 
 
-def preguntar_salir() -> bool:
-    respuesta = input("\nEstas seguro que quieres salir? -> ")
-    if respuesta == "s" or respuesta == "si":
-        return True
-    elif respuesta == "n" or respuesta == "no":
-        return False
-
-
+def limpiar_consola():
+    import os
+    os.system("cls")
 
 
 def main():
@@ -115,7 +112,7 @@ def main():
                 limpiar_consola()
 
 
-    pausa(5, True)
+    pausa(5, False)
     limpiar_consola()
 
 
