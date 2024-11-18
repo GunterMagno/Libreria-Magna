@@ -127,7 +127,7 @@ def main():
                 limpiar_consola()
 
 
-    pausa(3, False)
+    pausa(3, True)
     limpiar_consola()
 
 
