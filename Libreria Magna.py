@@ -73,6 +73,15 @@ def preguntar_salir() -> bool:
 
 
 def pausa(tiempo :int, tecla_enter :bool):
+    """
+    Importa el paquete time y pausa la ejecucion del programa
+
+    Args:
+
+        tiempo (int) = tiempo que va a estar pausada la ejecucion
+
+        tecla_enter (bool) = si es True va a estar pausada hasta que se haga un input en la consola
+    """
     import time
     if tiempo != 0:
         time.sleep(tiempo)
@@ -81,11 +90,17 @@ def pausa(tiempo :int, tecla_enter :bool):
 
 
 def limpiar_consola():
+    """
+    Importa el paquete os y limpia la pantalla
+    """
     import os
     os.system("cls")
 
 
 def main():
+    """
+    
+    """
     limpiar_consola()
     salir = None
 
@@ -112,7 +127,7 @@ def main():
                 limpiar_consola()
 
 
-    pausa(5, False)
+    pausa(3, False)
     limpiar_consola()
 
 
