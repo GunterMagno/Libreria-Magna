@@ -24,7 +24,7 @@ def comprobar_numero(numero) -> bool:
         print("*Error*, intenta de nuevo.")
         return False
     return True
-
+    
 
 def limpiar_consola():
     import os
@@ -68,15 +68,6 @@ def pedir_numero_usuario(mensaje :str) -> str:
     return numero
 
 
-
-def pausa(tiempo :int, tecla_enter :bool):
-    import time
-    if tiempo != 0:
-        time.sleep(tiempo)
-    if tecla_enter == True:
-        input("\nPresione ENTER para continuar...")
-
-
 def preguntar_salir() -> bool:
     respuesta = input("\nEstas seguro que quieres salir? -> ")
     if respuesta == "s" or respuesta == "si":
@@ -85,9 +76,35 @@ def preguntar_salir() -> bool:
         return False
 
 
+def pausa(tiempo :int, tecla_enter :bool):
+    """
+    Importa el paquete time y pausa la ejecucion del programa
+
+    Args:
+
+        tiempo (int) = tiempo que va a estar pausada la ejecucion
+
+        tecla_enter (bool) = si es True va a estar pausada hasta que se haga un input en la consola
+    """
+    import time
+    if tiempo != 0:
+        time.sleep(tiempo)
+    if tecla_enter == True:
+        input("\nPresione ENTER para continuar...")
+
+
+def limpiar_consola():
+    """
+    Importa el paquete os y limpia la pantalla
+    """
+    import os
+    os.system("cls")
 
 
 def main():
+    """
+    
+    """
     limpiar_consola()
     salir = None
 
@@ -114,7 +131,7 @@ def main():
                 limpiar_consola()
 
 
-    pausa(5, True)
+    pausa(3, True)
     limpiar_consola()
 
 
