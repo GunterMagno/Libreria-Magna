@@ -28,8 +28,7 @@ def comprobar_numero(numero) -> bool:
 
 def limpiar_consola():
     import os
-    os.system("cls")
-    
+    os.system("cls" if os.name == "nt" else "clear")    
 
 def elegir_opcion_menu() -> int:
     
