@@ -102,7 +102,18 @@ def main():
     
     """
     limpiar_consola()
-    salir = None
+    
+
+
+    pausa(3, True)
+    limpiar_consola()
+
+
+if __name__=="__main__":
+    main()
+
+
+salir = None
 
     while not salir:
         opcion = elegir_opcion_menu()
@@ -125,12 +136,3 @@ def main():
             elif pregunta == False:
                 salir = False
                 limpiar_consola()
-
-
-    pausa(3, True)
-    limpiar_consola()
-
-
-if __name__=="__main__":
-    main()
-
