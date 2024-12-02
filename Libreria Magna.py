@@ -26,6 +26,10 @@ def comprobar_numero(numero) -> bool:
     return True
     
 
+def limpiar_consola():
+    import os
+    os.system("cls" if os.name == "nt" else "clear")    
+
 def elegir_opcion_menu() -> int:
     
     opcion = None
@@ -94,8 +98,7 @@ def limpiar_consola():
     Importa el paquete os y limpia la pantalla
     """
     import os
-    os.system("cls")
-
+    os.system("cls" if os.name == "nt" else "clear")
 
 def main():
     """
